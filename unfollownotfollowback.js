@@ -116,7 +116,7 @@ const Excute = async function(User,sleep){
 			}
 		}));
 		console.log(chalk`{blue  | Account To Unfollow : ${AccountToUnfollow.length}}`)
-		AccountToUnfollow = _.chunk(AccountToUnfollow, 10);
+		AccountToUnfollow = _.chunk(AccountToUnfollow, 15);
 		for (let i = 0; i < AccountToUnfollow.length; i++) {
 			await Promise.all(AccountToUnfollow[i].map(async(akun) => {
 				const doUnfollow = await Unfollow(doLogin.session, akun);
